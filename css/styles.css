@@ -5,6 +5,9 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
 }
+#mainSection {
+  margin-bottom: 50px;
+}
 h1 {
   margin: 0 40px 30px 40px;
   font-size: 30px;
@@ -22,9 +25,12 @@ h1 {
 }
 .rating {
   height: 78px;
+  border-radius: 6px;
   margin-bottom: 16px;
-  border-radius: 5px;
   background-color: hsl(300, 24%, 96%);
+}
+.rating:last-child {
+  margin-bottom: 0;
 }
 .stars {
   width: 125px;
@@ -43,6 +49,32 @@ h1 {
   line-height: 39px;
   text-align: center;
   clear: both;
+}
+#commentSection {
+  margin-bottom: 0;
+}
+.comment {
+  padding: 28px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  background-color: hsl(300, 43%, 22%);
+  font-size: 13px;
+  color: hsl(0, 0%, 100%);
+}
+.comment:last-child {
+  margin-bottom: 0;
+}
+.comment > img {
+  width: 41px;
+  height: 41px;
+  border-radius: 20px;
+  float: left;
+}
+#name {
+  font-weight: 700;
+}
+#status {
+  color: hsl(333, 80%, 67%);
 }
 
 .attribution {
