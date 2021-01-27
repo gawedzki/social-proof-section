@@ -89,30 +89,37 @@ h1 {
   margin-top: 25px;
   margin-bottom: 0;
 }
-
 .attribution {
   margin-top: 2px;
   font-size: 11px;
   text-align: center;
+  clear: left;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
-
 @media only screen and (min-width: 769px) {
+  #background {
+    background-image: url(../images/bg-pattern-top-desktop.svg),
+      url(../images/bg-pattern-bottom-desktop.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: top left, bottom right;
+    background-size: auto auto;
+  }
+}
+@media only screen and (min-width: 1024px) {
   body {
     width: 100%;
   }
   #background {
     max-width: 1440px;
-    padding: 130px 165px;
+    box-sizing: border-box;
+    padding: 130px 165px 100px 165px;
     margin-left: auto;
     margin-right: auto;
-    background-image: url(../images/bg-pattern-top-desktop.svg),
-      url(../images/bg-pattern-bottom-desktop.svg);
-    background-repeat: no-repeat, no-repeat;
   }
   #mainSection {
+    margin-bottom: 75px;
   }
   #headerSection {
     float: left;
@@ -125,17 +132,32 @@ h1 {
   }
   #intro {
     margin-right: 90px;
+    margin-bottom: 0;
   }
   #ratingSection {
-    float: left;
+    float: right;
     width: 49%;
   }
-  #ratingSection > div:nth-child(2) {
-    margin-left: 50px;
+  #commentSection {
+    clear: left;
   }
-  #ratingSection > div:nth-child(3) {
-    margin-left: 100px;
+  .comment {
+    width: 31.531%;
+    box-sizing: border-box;
+    margin-right: 2.703%;
+    float: left;
   }
+  .comment:last-child {
+    margin-right: 0;
+  }
+  .clearfix::after {
+    content: " ";
+    display: block;
+    height: 0;
+    clear: both;
+  }
+}
+@media only screen and (min-width: 1440px) {
   .stars,
   .rating > p {
     float: left;
@@ -151,7 +173,16 @@ h1 {
   .rating > p {
     padding-top: 10px;
   }
-  #commentSection {
-    clear: left;
+  #ratingSection > div:nth-child(2) {
+    margin-left: 50px;
+  }
+  #ratingSection > div:nth-child(3) {
+    margin-left: 100px;
+  }
+  .comment:nth-child(2) {
+    margin-top: 16px;
+  }
+  .comment:nth-child(3) {
+    margin-top: 32px;
   }
 }
